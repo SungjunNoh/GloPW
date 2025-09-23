@@ -1,9 +1,12 @@
-This code --
-wave_power_model generates ---. Format
-wave_occurrence_model generates ---
-GloPW run both models, combine the results, and generates ---
+This model produces global EMIC wave activities (occurrence and wave power) in the Earth's magneosphere. The wave activity is modeled globally on the magnetic equator, and as functions of L-MLT.
 
-Format of the input files
+The wave occurrence model (wave_occurrence_model.py) is designed to determine presence or absence, which is a binary classification problem, of EMIC wave activity at a given time segment and position. To address this binary classification problem, we utilize the Extreme Gradient Boosting (XGBoost) library (available at https://xgboost.readthedocs.io/en/stable/). The XGBoost is a decision tree-based gradient boosting technique that is widely used as a machine learning algorithm for binary classification problems. It captures nonlinear relationships and is also robust to overfitting issues (Chen et al. 2016).
+
+Once the occurrence model identifies the presence of an EMIC wave, the power model (wave_power_model.py) estimates its frequency-integrated power (in nT²). To model the wave power, we construct a probability distribution function (PDF) of wave power in each spatial and Hp30 bin. In the first method, we choose 50% percentile of the PDF as the representing wave power. 16% and 84% quantiles, which fall into 68% confidence interval, are the lower and upper bounds of the wave power, respectively. However, one cannot fully reconstruct the PDF only with the three values. Thus, the model also provides Monte Carlo samples of wave power from the PDF, allowing the user to generate any number of samples from the PDF. This sampling method randomly chooses a value in the cumulative distribution function (CDF)—a random position in the y axis of Figure 5—and maps the selected position to the equivalent wave power; thus there is a higher probability to choose values near the peak of the PDF. If the number of samples is statistically large, this approach approximates the true distribution function and provides flexible uncertainty estimates which is useful for global simulations.
+
+GloPW run both models, combine the results, and generates final outputs. Detailed descriptions are available in Noh et al. (2025).
+
+# Format of the input files
 1) Threshold.txt
 
      0.298000	<-- H+-band threhold
@@ -43,4 +46,5 @@ or
 conda install -c conda-forge xgboost
 
 3) Run GloPW.py in the src folder.
+
 
