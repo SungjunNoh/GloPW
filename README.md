@@ -29,15 +29,25 @@ GloPW run both models, combine the results, and generates final outputs. Detaile
 ...
 
 Col1: Dipole tilt angle in degree
+
 Col2: F10.7
+
 Col3: HP30
+
 Col4: HP30* (maximum HP30 in 3 hours)
+
 Col5: Solar wind dynamic pressure in nPa
+
 Col6: L
+
 Col7: MLT in hour
+
 Col8: MLAT in degree
+
 Col9: Distance to the LPP
+
 Col10: Lpp
+
 
 
 HOW TO RUN THE MODEL?
