@@ -12,9 +12,10 @@ GloPW run both models, combine the results, and generates final outputs. Detaile
 1) Threshold.txt
 
      0.298000	<-- H+-band threhold
+   
      0.213000	<-- He+-band threhold
 
-2) RF_model_input.txt
+3) RF_model_input.txt
 
 		Col1				Col2				Col3				Col4				Col5				Col6				Col7				Col8				Col9				Col10
 
