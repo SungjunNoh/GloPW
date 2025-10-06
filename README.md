@@ -1,3 +1,5 @@
+O4993
+
 # GloPW
 
 This model produces global EMIC wave activities (occurrence and wave power) in the Earth's magneosphere. The wave activity is modeled globally on the magnetic equator, and as functions of L-MLT.
