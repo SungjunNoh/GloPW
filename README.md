@@ -55,7 +55,7 @@ Col10: Lpp
 
 HOW TO RUN THE MODEL?
 
-1) Ensure that your python version should be later than 3.3.
+1) Ensure that your python version is later than 3.3.
 
 2) Install XGBoost in your python environment. See details of XGBoost https://xgboost.readthedocs.io/en/stable/.
 
