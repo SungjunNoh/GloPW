@@ -65,5 +65,5 @@ conda install -c conda-forge xgboost
 
 3) Run GloPW.py in the src folder.
 
-# Caution for Absence of the model file
+# Notice: Missing Model File
 In the current version on this GitHub, there is no occurrence model file due to its large size. The file will be uploaded soon here and you can find the model file at https://drive.google.com/drive/folders/0AIRxI0u5KFo7Uk9PVA upon permission.
